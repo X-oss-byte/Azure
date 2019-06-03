@@ -9,7 +9,7 @@ Welcome to the App-Service-Migration-Assistant wiki!
 1. **Does App Service Migration Assistant support apps running on Windows and Linux?**
     At this time we support .NET app migration from Windows OS to Azure App Service.
 
-2.  **What are all the readiness checks that the Azure Migration Assistant makes? **
+2.  **What are all the readiness checks that the Azure Migration Assistant makes?**
     * [App Service Migration Assistant Readiness Checks](https://appmigration.microsoft.com/readinesschecks)
    
 3. **What are the current list of conditions that we consider that make an application unsuitable for automatic migration?**
