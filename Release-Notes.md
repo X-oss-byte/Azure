@@ -1,3 +1,9 @@
+### 0.0.6
+* Added support for PHP applications using PHP version 5 or 7
+* Specific notifications and handling for WordPress applications including database connection discovery and post-migration domain fixup assistance
+* Warning for discovering only "localhost" server database connection string
+* Logging uses ApplicationInsights, some additional logging
+
 ### 0.0.5
 * Name change to Azure App Service Migration Assistant (from Azure App Service Migration Tool). 
 * Install with already installed earlier version results in SxS rather than upgrade.
