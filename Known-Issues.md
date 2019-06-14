@@ -5,7 +5,7 @@ For example, WordPress stores media content, such as images, in the file content
 
 
 # Using “localhost” for Database Server Connections
-When an application is using “localhost” as the server name for their database connections it will only work when running on the same machine as the database server and thus fail to connect after migration to Azure. This reference should be changed prior to migration, or the migrated site will not be able to connect to the database.
+When an application is using “localhost” as the server name for their database connections it will only work when running on the same machine as the database server and thus fail to connect after migration to Azure. This reference should be changed prior to migration, or the migrated site will not be able to connect to the database. If this is a WordPress application please check [the WordPress troubleshooting page](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Troubleshooting-Common-WordPress-Migration-Issues#unable-to-establish-database-connection-after-changing-localhost-server-to-machine-name-locally).
  
 There are a few possible configurations you might choose for your database connection:
 ### Database remains in place and is internet accessible (i.e. the Azure site will be able to connect to it directly)
