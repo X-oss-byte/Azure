@@ -16,7 +16,12 @@ Hostname is stored in the WordPress database and used to generate links that are
 
 * Refresh your WordPress site. At this point your application should generally work – though there may still be specific hardcoded references to your old domain in post content.
 2.  When you’re ready to fully switch to the Azure site, you can update the database values (“siteurl” and “home” in wp_options table) and remove the ones in your wp-config.php. You may want to check out WordPress’ documentation on changing your domain for additional fixup options as needed (in case there are any hard-coded / permalinks that would require a database search-and-replace action to correct):  https://wordpress.org/support/article/moving-wordpress/#changing-your-domain-name-and-urls 
+
+
+## Unable to view media in new posts
+This may be related to using Hybrid Connections and having local and migrated sites running simultaneously. [Learn more about this](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Known-Issues#using-hybrid-connections-for-apps-with-stateful-file-content-like-wordpress)
  
+
  
 # Database connection issues
  
@@ -24,7 +29,7 @@ Hostname is stored in the WordPress database and used to generate links that are
 Either you are using "localhost" or you have updated wp-config.php to use machine name but that breaks the database connections. 
 ### What's happening?
 This is typically due to the MySQL database running on the same machine as the web server and the MySQL configuration not allowing for a "remote" connection. The db user login is often created as for @'localhost'.
-Troubleshooting steps:
+### Troubleshooting steps:
 1. Update db user to enable remote connections. Open up the MySQL Command Line Client (or use a tool like MySQL WorkBench), and enter the MySQL server admin password to connect to your server. Then run the below lines, replacing YOUR_DB_USER_NAME with your actual db user name (DB_USER from wp-config.php)
 
 `UPDATE mysql.user SET Host='%' WHERE Host='localhost' AND User='YOUR_DB_USER_NAME';
@@ -33,6 +38,7 @@ FLUSH PRIVILEGES;`
 
 2. Update the wp-config.php file in wordpress site with the machine name rather than "localhost" for DB_HOST
  
+
 ## Unable to establish database connection after migration when using Hybrid Connections
 The WordPress application works fine locally, but fails to establish a database connection after migration
 ### Troubleshooting steps:
