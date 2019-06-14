@@ -1,4 +1,4 @@
-Below are some descriptions of common issues with migration WordPress sites to Azure and how to resolve them. 
+Below are some common issues with migrating WordPress sites to Azure and how to resolve them. 
  
 ## Redirected to local site when clicking links on migrated Azure site
 Going to the root of your site works to display the homepage, but when you click on links such as for a post, you are taken to a URL with the original local site domain rather than staying on your new Azure site. Alternatively the links may be correct, but the styles and rendering of the site are not correct.
