@@ -3,11 +3,11 @@ Welcome to the App-Service-Migration-Assistant wiki!
 # Getting Started
 * [Introducing App Service Migration Assistant for ASP.NET applications](https://azure.microsoft.com/en-us/blog/introducing-the-app-service-migration-assistant-for-asp-net-applications/?utm_source=t.co&utm_medium=referral)
 * [Migrate Your .NET Web Our New Step-By-Step Assistant - PRE10](https://www.youtube.com/watch?v=KYwPVok3-qI)
-* [Start your app assessments and migrations now](https://appmigration.microsoft.com)
+* [Start your .NET and PHP app assessments and migrations now](https://appmigration.microsoft.com)
 
 # FAQs
 1. **Does App Service Migration Assistant support apps running on Windows and Linux?**
-    At this time we support .NET app migration from Windows OS to Azure App Service.
+    At this time we support .NET and PHP(new!) app migration from Windows OS to Azure App Service.
 
 2.  **What are all the readiness checks that the Azure Migration Assistant makes?**
     * [App Service Migration Assistant Readiness Checks](https://appmigration.microsoft.com/readinesschecks)
