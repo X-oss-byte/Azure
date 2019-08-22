@@ -1,5 +1,6 @@
 ### 0.1.0 (Preview)
 * Added support for virtual directory migrations
+* Added support for setting up Hybrid Connections on an alternate server
 * Conversion to more comprehensive configuration assessment model
 
 ### 0.0.6
