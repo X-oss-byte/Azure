@@ -1,4 +1,4 @@
-### 0.1.0
+### 0.1.0 (Preview)
 * Added support for virtual directory migrations
 * Conversion to more comprehensive configuration assessment model
 
