@@ -1,3 +1,7 @@
+### 0.1.0
+* Added support for virtual directory migrations
+* Conversion to more comprehensive configuration assessment model
+
 ### 0.0.6
 * Added support for PHP applications using PHP version 5 or 7
 * Specific notifications and handling for WordPress applications including database connection discovery and post-migration domain fixup assistance
