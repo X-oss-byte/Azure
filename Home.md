@@ -14,7 +14,7 @@ Welcome to the App-Service-Migration-Assistant wiki!
    
 3. **What are the current list of conditions that we consider that make an application unsuitable for automatic migration?**
     Below is the list: 
-    * IIS version less than 7.0
+    * IIS version less than 7.5
     * Apps with a dependency on assemblies in the GAC that we don’t offer in our configuration
     * Apps that depend on session state that would break in our environment
     * Dependence on ISAPI filters
