@@ -16,6 +16,7 @@ Welcome to the App-Service-Migration-Assistant wiki!
     Below is the list: 
     * IIS version less than 7.5
     * Missing .NET Framework 4.7.2 Runtime
+    * Missing administrator access on the server
     * Apps with a dependency on assemblies in the GAC that we don’t offer in our configuration
     * Apps that depend on session state that would break in our environment
     * Dependence on ISAPI filters
