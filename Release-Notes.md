@@ -1,3 +1,8 @@
+### 1.0.0
+* Integration with Azure Migrate Hub (feature available November 11, 2019)
+* Added support for migrating to an existing App Service Plan
+* Improved error handling, including better .NET Framework 4.7.2 required message
+
 ### 0.1.2 (Preview)
 * Fixes for blocked assessments related to using certain properties in IIS7.5 configuration or using unsupported protocols
 * Unblocking sites with connection strings issues
