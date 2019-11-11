@@ -1,5 +1,5 @@
 ### 1.0.0
-* Integration with Azure Migrate Hub (feature available November 11, 2019)
+* Integration with Azure Migrate Hub
 * Added support for migrating to an existing App Service Plan
 * Improved error handling, including better .NET Framework 4.7.2 required message
 
