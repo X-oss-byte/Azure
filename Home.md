@@ -9,14 +9,18 @@ Welcome to the App-Service-Migration-Assistant wiki!
 1. **Does App Service Migration Assistant support apps running on Windows and Linux?**
     At this time we support .NET and PHP(new!) app migration from Windows OS to Azure App Service.
 
-2.  **What are all the readiness checks that the Azure Migration Assistant makes?**
+2. **What are the current server requirements to use the Migration Assistant?**
+    * Windows server IIS version greater than or equal to 7.5
+    * Administrator access
+    * .NET Framework 4.7.2 Runtime 
+    * Outbound connections allowed (see here for details: https://github.com/Azure/App-Service-Migration-Assistant/wiki/How-the-Assistant-Works#outbound-connections)
+    * Local IIS configuration (clustered / remote IIS server configurations not supported)
+
+3.  **What are all the readiness checks that the Azure Migration Assistant makes?**
     * [App Service Migration Assistant Readiness Checks](https://appmigration.microsoft.com/readinesschecks)
    
-3. **What are the current list of conditions that we consider that make an application unsuitable for automatic migration?**
+4. **What are the current list of conditions that we consider that make an application unsuitable for automatic migration?**
     Below is the list: 
-    * IIS version less than 7.5
-    * Missing .NET Framework 4.7.2 Runtime
-    * Missing administrator access on the server
     * Apps with a dependency on assemblies in the GAC that we don’t offer in our configuration
     * Apps that depend on session state that would break in our environment
     * Dependence on ISAPI filters
