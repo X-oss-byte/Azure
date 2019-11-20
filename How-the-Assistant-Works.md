@@ -4,7 +4,7 @@ The Azure App Service Migration Assistant is made up of 2 main parts: an Electro
 
 When the app is started, it calls the helper .exe to get the list of sites on the machine. 
 
-Once a site is selected, the helper .exe is called to create an anonymized representation of the site configuration. This anonymized configuration is sent to the assessment API to check for unsupported configuration patterns and a report of those results is returned. There are also some assessment checks that are done locally. 
+Once a site is selected, the helper .exe is called to create an anonymized representation of the site configuration (see below section on how to do this outside the UI if you want to see what this looks like). This anonymized configuration is sent to the assessment API to check for unsupported configuration patterns and a report of those results is returned. There are also some assessment checks that are done locally. 
 
 If a site does not have any migration blockers, the next step is logging in to an Azure account. This is done by requesting a device code which is shown to the user. The user may then complete the login on any device while the app polls for the token. 
 
@@ -13,7 +13,23 @@ Once the login is complete, the application queries ARM APIs to get option infor
 At this point the application Azure resources have been created, content has been published, and the site is ready to manage and test out in Azure.
 
 
-# Outbound connections
+## What information is sent for assessments?
+If you want to see what is sent to the assessment endpoint you may create a copy to check out yourself by running a few commands. Here's how:
+1. Find the location where the Migration Assistant was installed on the server
+    * You can find out the path for the installation by checking the Properties of the AppServiceMigrationTool desktop shortcut. Right-click the shortcut, pick Properties, then look for the path in the "Start in" value
+    * This will likely be in a location like: %systemdrive%\users\<username>\AppData\Local\Programs\azure-appService-migrationAssistant
+2. Open an administrator command prompt and navigate to that location, plus added "\iisConfigAssistant"
+    * example: 
+`cd C:\Users\krolson\AppData\Local\Programs\azure-appService-migrationAssistant\iisConfigAssistant`
+3. Run this command to get the list of sites: 
+`iisConfigAssistant.exe GetSiteList`
+4. Run below command to generate the configuration information that would be used for the assessment, replacing [siteName] for the site of interest exactly as it was returned in the previous GetSiteList command. In Migration Assistant the generated AnonAssessmentInfo output is the data sent to the assessment endpoint (kept in memory rather than saved as a file), while the MappingFile remains local on the server and is deleted after assessment is complete.
+    * iisConfigAssistant.exe GetSiteAssessmentData "[siteName]" true [pathToMappingFile] > [pathToAnonAssessmentInfoFile]
+    * example:
+`iisConfigAssistant.exe GetSiteAssessmentData "Default Web Site" true C:\TEMP\dontShareThisStringMappingFile.json > C:\TEMP\AnonAssessmentInfo.json`
+
+
+## Outbound connections
 **Outbound connections made by the Azure App Service Migration Assistant include:**
 * appmigration.microsoft.com (Optional)
   * checks if newer versions of the Assistant are available
