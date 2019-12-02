@@ -2,9 +2,9 @@
 
 *   ##### **Port Bindings**
 
-    <div>Azure App Service applications are hosted on a worker machine behind a load balancing front end router. The front end is a shared resource that is not associated with a particular tenant. The front-end load balancer listens for standard HTTP traffic on TCP port 80, and for encrypted HTTPS traffic on TCP port 443\. It does not listen on other TCP ports.</div>
+    <div>Azure App Service applications are hosted on a worker machine behind a load balancing front end router. The front end is a shared resource that is not associated with a particular tenant. The front-end load balancer listens for standard HTTP traffic on TCP port 80, and for encrypted HTTPS traffic on TCP port 443. It does not listen on other TCP ports.</div>
 
-    <div>This check examines the bindings on the site to be migrated and verifies that it is not listening on TCP ports other than 80 and 443\. It will be necessary to configure the site to listen only on these ports before it can be migrated.</div>
+    <div>This check examines the bindings on the site to be migrated and verifies that it is not listening on TCP ports other than 80 and 443. It will be necessary to configure the site to listen only on these ports before it can be migrated.</div>
 
     <div>
 
@@ -212,7 +212,7 @@
 
 *   ##### **Virtual Directories**
 
-    <div>Azure App Services stores the root content for a site in a fixed home directory **D:\home\site\wwwroot** . When an application is migrated, the content under the site root is copied to the home directory on the Azure App Service worker role machine. If there are virtual directories defined on the site to be migrated, the physical paths will not exist on the Azure App Service machine and attempts to access content in the virtual directories will fail.</div>
+    <div>Azure App Services stores the root content for a site in a fixed home directory > D:\home\site\wwwroot . When an application is migrated, the content under the site root is copied to the home directory on the Azure App Service worker role machine. If there are virtual directories defined on the site to be migrated, the physical paths will not exist on the Azure App Service machine and attempts to access content in the virtual directories will fail.</div>
 
     <div>This check examines the site to be migrated for virtual directories other than the root of the site. If detected, is will be necessary to reorganize the content so that it's all located under the site root, with no virtual directories defined, before the site can be migrated.  
 
