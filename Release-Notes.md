@@ -1,3 +1,12 @@
+### 1.0.1
+
+* Added ability to target US Government Cloud
+* Rebuilt to be independent of installed .NET Framework versions
+* Automatically refresh tokens when on Login page in the same session
+* Separate pre-migration validation to occur before showing migration progress, block on site name validation
+* Fix for migration 404 error case when creating a new ASP
+* Improved error messages when outbound connections are blocked 
+
 ### 1.0.0
 * Integration with Azure Migrate Hub
 * Added support for migrating to an existing App Service Plan
