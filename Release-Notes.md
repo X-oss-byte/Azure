@@ -1,3 +1,7 @@
+### 1.0.2
+
+* Improved handling of a configuration error case
+
 ### 1.0.1
 
 * Added ability to target US Government Cloud
