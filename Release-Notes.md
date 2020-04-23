@@ -1,3 +1,7 @@
+### 1.0.4
+
+* Enable Azure Migrate Project options when targeting US Government cloud
+
 ### 1.0.2
 
 * Improved handling of a configuration error case
