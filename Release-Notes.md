@@ -1,3 +1,8 @@
+### 1.0.5 (Coming May 26, 2020)
+
+* Linux Preview for migrating on-premises Docker containers using Docker Hub or Antares Container Registry
+* Sync assessment data with Azure Migrate Hub for migrations with blockers
+
 ### 1.0.4
 
 * Enable Azure Migrate Project options when targeting US Government cloud
