@@ -1,6 +1,7 @@
-### 1.0.5 (Coming May 26, 2020)
+### 1.0.5 
 
 * Linux Preview for migrating on-premises Docker containers using Docker Hub or Antares Container Registry
+* SHA256 for azure-appService-migrationAssistant.tar.gz: ad536f70bf6fc4f5051e941f4315acea5eb1bdea5e96e4e26cbc7ee4c3ab8b9d, see [Install on Linux](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Linux-Notes#install-on-linux)
 * Sync assessment data with Azure Migrate Hub for migrations with blockers
 
 ### 1.0.4
