@@ -1,4 +1,7 @@
 
+# IIS Server Site Checks
+
+
 ### **Port Bindings**
 
 Azure App Service applications are hosted on a worker machine behind a load balancing front end router. The front end is a shared resource that is not associated with a particular tenant. The front-end load balancer listens for standard HTTP traffic on TCP port 80, and for encrypted HTTPS traffic on TCP port 443. It does not listen on other TCP ports.
@@ -183,10 +186,36 @@ This error occurs when IIS returns an error when being scanned by the app servic
 
 ### **Virtual Directories**
 
-Azure App Services stores the root content for a site in a fixed home directory `D:\home\site\wwwroot` . When an application is migrated, the content under the site root is copied to the home directory on the Azure App Service worker role machine. If there are virtual directories defined on the site to be migrated, the physical paths will not exist on the Azure App Service machine and attempts to access content in the virtual directories will fail.
+Azure App Services stores the root content for a site in a fixed home directory `D:\home\site\wwwroot` . When an application is migrated, the content under the site root is copied to the home directory on the Azure App Service worker role machine. If there are virtual directories defined on the site to be migrated, the Migration Assistant will configure the correct paths for the virtual directories and migrate their content. 
 
-This check examines the site to be migrated for virtual directories other than the root of the site. If detected, is will be necessary to reorganize the content so that it's all located under the site root, with no virtual directories defined, before the site can be migrated.  
-
-App service migration assistant does not support migration of applications with Virtual directories at this time. We plan to add support for these soon.
+App service migration assistant does not support migration of applications with Virtual directories on UNC shares.
 
 * * *
+
+# Linux Running Container Checks
+
+### **Linux Platform**
+
+Azure App Service supports running both Windows containers and Linux containers, however the Migration Assistant at this time will only set up configuration for Linux containers during a migration. Please see [Run a custom Windows container in Azure](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-windows-container) for how to set up a Windows container in App Service without Migration Assistant.
+
+* * *
+
+### **Container Volume**
+
+Defined container volume configuration will not be used when the image is started on Azure App Service. If the application will not work correctly without this specific configuration it may not be a good candidate to lift-and-shift without some extra verifications.
+
+* * *
+
+### **Exposed Ports**
+
+Azure App Service will expose the first defined TCP port in the image configuration for HTTP traffic when it starts the container. If there are no defined exposed ports, then the container will not be able to receive web traffic.
+
+###### Potential Remediation steps:
+
+*   Modify the image configuration and re-launch the container with an exposed TCP port before re-running the Migration Assistant. Confirm that clients of the container site still work as expected.
+
+* * *
+
+### **HTTP Traffic**
+
+Azure App Service will expose the first defined TCP port in the image configuration for HTTP traffic when it starts the container. In order to determine if the container is configured to handle HTTP requests, the Migration Assistant attempts to make a generic GET request using that port. As the request is generic, and expected behavior may be to reject this type of generic request, the response code does not need to be a successful HTTP response code. This check does not confirm that a container site is functionally working, simply that it can respond to HTTP requests. 
