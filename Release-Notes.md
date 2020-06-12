@@ -1,3 +1,8 @@
+### 1.0.6 
+
+* Fix for specific operation status polling during template deployment
+* Fix for resource group creation for USGov cloud target
+
 ### 1.0.5 
 
 * Linux Preview for migrating on-premises Docker containers using Docker Hub or Antares Container Registry
