@@ -219,3 +219,38 @@ Azure App Service will expose the first defined TCP port in the image configurat
 ### **HTTP Traffic**
 
 Azure App Service will expose the first defined TCP port in the image configuration for HTTP traffic when it starts the container. In order to determine if the container is configured to handle HTTP requests, the Migration Assistant attempts to make a generic GET request using that port. As the request is generic, and expected behavior may be to reject this type of generic request, the response code does not need to be a successful HTTP response code. This check does not confirm that a container site is functionally working, simply that it can respond to HTTP requests. 
+
+* * *
+
+# Java Tomcat Checks
+
+### **Java Version**
+
+Azure App Service currently has built-in support for Java versions 1.8 and 11 running on Tomcat. Alternate versions may still be run on App Service using your own container (https://azure.microsoft.com/en-us/services/app-service/containers/).
+
+* * *
+
+### **Package War File**
+
+Checks for existing .war or ability to create a deployable .war file. If an application is based on an existing .war file, this is what will be published as the app content. If there is not an existing .war file the tool will look for and use the jar executable in JAVA_HOME to create a .war file and will not be able to do this packaging if it cannot find the jar executable in that location.
+
+* * *
+
+### **Detect Tomcat connector port**
+
+Azure App Service only allows incoming requests on ports 80 and 443. If other ports are used for incoming requests on the pre-migration site, then clients making requests to the application will have to update the port used in their requests in order to work with the migrated site.
+
+* * *
+
+### **Detect MemoryRealm usage**
+
+Please check out this link for more information: https://docs.microsoft.com/en-us/azure/developer/java/migration/migrate-tomcat-to-tomcat-app-service#determine-whether-memoryrealm-is-used
+
+### **Detect Tomcat Clustering**
+
+Please check out this link for more information: https://docs.microsoft.com/en-us/azure/developer/java/migration/migrate-tomcat-to-tomcat-app-service#determine-whether-tomcat-clustering-is-used
+
+### **Detect Session Manager**
+
+Please check out this link for more information: https://docs.microsoft.com/en-us/azure/app-service/configure-language-java?pivots=platform-linux#use-redis-as-a-session-cache-with-tomcat
+
