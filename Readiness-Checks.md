@@ -232,7 +232,7 @@ Azure App Service currently has built-in support for Java versions 1.8 and 11 ru
 
 ### **Package War File**
 
-Checks for existing .war or ability to create a deployable .war file. If an application is based on an existing .war file, this is what will be published as the app content. If there is not an existing .war file the tool will look for and use the jar executable in JAVA_HOME to create a .war file and will not be able to do this packaging if it cannot find the jar executable in that location.
+Checks for existing .war or ability to create a deployable .war file. If an application is based on an existing .war file, this is what will be published as the app content. If there is not an existing .war file the tool will look for and use the jar executable from a java installation to create a .war. The tool looks for the jar executable under the bin directory of the path specified by the JDK_HOME environment variable, or, if that environment variable is not found, in the JAVA_HOME location.
 
 * * *
 
