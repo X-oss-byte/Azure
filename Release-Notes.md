@@ -1,9 +1,17 @@
+### 1.0.8 (Preview) 
+
+* Preview of Java application migration Tomcat running on Windows and Linux servers
+* SHA256 for azure-appService-migrationAssistant.tar.gz: d30564a4b446de70c154c0600d9d2f39cb6560bd35c1b22262bffa35c2f544bb, see [Install on Linux](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Linux-Notes#install-on-linux)
+* Updated information sent to Azure migration hub projects
+* Fix for missing Azure migration projects in dropdown
+* Fix for blank screen during content publishing step for large application content
+
 ### 1.0.6 
 
 * Fix for specific operation status polling during template deployment
 * Fix for resource group creation for USGov cloud target
 
-### 1.0.5 
+### 1.0.5 (Preview)
 
 * Linux Preview for migrating on-premises Docker containers using Docker Hub or Antares Container Registry
 * SHA256 for azure-appService-migrationAssistant.tar.gz: ad536f70bf6fc4f5051e941f4315acea5eb1bdea5e96e4e26cbc7ee4c3ab8b9d, see [Install on Linux](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Linux-Notes#install-on-linux)
