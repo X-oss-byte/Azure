@@ -1,6 +1,6 @@
 ### 1.0.8 (Preview) 
 
-* Preview of Java application migration Tomcat running on Windows and Linux servers
+* Preview of Java application migration for Tomcat running on Windows and Linux servers
 * SHA256 for azure-appService-migrationAssistant.tar.gz: d30564a4b446de70c154c0600d9d2f39cb6560bd35c1b22262bffa35c2f544bb, see [Install on Linux](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Linux-Notes#install-on-linux)
 * Updated information sent to Azure migration hub projects
 * Fix for missing Azure migration projects in dropdown
