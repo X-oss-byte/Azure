@@ -8,4 +8,4 @@
 `sudo azure-appService-migrationAssistant-1.0.5/azure-appservice-migrationassistant --no-sandbox`
 
 ### Shell Options
-If you don't have a UI on your Linux machine or simply prefer to use shell only, you can do most of the things the application can do with Azure CLI instead. Please check out this example of one way you might use Azure CLI to move a container from your Linux machine to App Service: https://github.com/Azure/App-Service-Migration-Assistant/wiki/Using-Azure-CLI
+If you don't have a UI on your Linux machine or simply prefer to use shell only, you can do most of the things the application can do for docker container migrations with Azure CLI instead. Please check out this example of one way you might use Azure CLI to move a container from your Linux machine to App Service: https://github.com/Azure/App-Service-Migration-Assistant/wiki/Using-Azure-CLI
