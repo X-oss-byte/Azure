@@ -12,7 +12,6 @@ Welcome to the App-Service-Migration-Assistant wiki!
 2. **What are the current server requirements to use the Migration Assistant?**
     * Windows server IIS version greater than or equal to 7.5
     * Administrator access
-    * .NET Framework 4.7.2 Runtime 
     * Outbound connections allowed (see here for details: https://github.com/Azure/App-Service-Migration-Assistant/wiki/How-the-Assistant-Works#outbound-connections)
     * Local IIS configuration (clustered / remote IIS server configurations not supported)
 
@@ -21,7 +20,6 @@ Welcome to the App-Service-Migration-Assistant wiki!
    
 4. **What are the current list of conditions that we consider that make an application unsuitable for automatic migration?**
     Below is the list: 
-    * Apps with a dependency on assemblies in the GAC that we don’t offer in our configuration
     * Apps that depend on session state that would break in our environment
     * Dependence on ISAPI filters
     * Dependence on ISAPI extensions
