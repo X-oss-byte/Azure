@@ -1,6 +1,6 @@
 ### Install on Linux
 1. Download the azure-appService-migrationAssistant.tar.gz file to the machine
-2. Confirm the file SHA matches the release notes SHA using command like: 
+2. Confirm the file SHA matches the latest release SHA noted on [Release Notes](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Release-Notes) page using command like: 
 `sha256sum azure-appService-migrationAssistant.tar.gz`
 3. Create (or pick) a directory where you want to place the tool, such as: `mkdir DirectoryName`
 4. Unzip the file into that directory: `tar -xzf azure-appService-migrationAssistant.tar.gz -C DirectoryName`
