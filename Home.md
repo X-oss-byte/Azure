@@ -7,7 +7,7 @@ Welcome to the App-Service-Migration-Assistant wiki!
 
 # FAQs
 1. **Does App Service Migration Assistant support apps running on Windows and Linux?**
-    At this time we support .NET and PHP(new!) app migration from Windows OS to Azure App Service.
+    At this time we support .NET app migration from Windows OS to Azure App Service.
 
 2. **What are the current server requirements to use the Migration Assistant?**
     * Windows server IIS version greater than or equal to 7.5
