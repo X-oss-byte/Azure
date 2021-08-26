@@ -1,6 +1,8 @@
 ## Where to get the scripts?
 PowerShell scripts for assessing and migrating all .NET sites on a single IIS server in bulk are now available on our downloads page, under "App Service migration assistant for PowerShell Scripts": https://azure.microsoft.com/en-us/services/app-service/migration-assistant/
 
+*During the week of 2021-08-23 the azure.microsoft.com PowerShell script download may be incorrectly providing the Migration Assistant UI experience **.msi** - in that case you may use this direct download link for the PowerShell scripts Preview: https://appmigration.microsoft.com/api/download/psscriptpreview/AppServiceMigrationScripts.zip 
+
 ## Minimum requirements
 * Requires Administrator permissions on the server
 * Machine executing scripts must be using PowerShell v5.1 or higher
