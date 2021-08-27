@@ -16,7 +16,7 @@ Welcome to the App-Service-Migration-Assistant wiki!
     * Local IIS configuration (clustered / remote IIS server configurations not supported)
 
 3.  **What are all the readiness checks that the Azure Migration Assistant makes?**
-    * [App Service Migration Assistant Readiness Checks](https://appmigration.microsoft.com/readinesschecks)
+    * [App Service Migration Assistant Readiness Checks](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Readiness-Checks)
    
 4. **What are the current list of conditions that we consider that make an application unsuitable for automatic migration?**
     Below is the list: 
