@@ -159,6 +159,19 @@ Note that it is possible for web applications to interact with databases in diff
 
 * * *
 
+### **PHP on Windows**
+
+Checks if PHP handlers are configured for the site. Support for PHP using Windows framework on App Service will be ending as outlined on the [PHP on App Service page](https://github.com/Azure/app-service-linux-docs/blob/master/Runtime_Support/php_support.md#php-on-app-service). Support will continue for PHP on App Service using Linux, however automatic migration with Migration Assistant from IIS to App Service does not currently convert from Windows to Linux, so we do not recommend this type of migration.
+
+
+###### Potential Remediation steps:
+
+*   Verify if PHP is in use by the site - if not, then may ignore this warning
+*   If PHP is in use by the site, then we do not recommend migrating with the migration assistant - please consider using alternate options, such as separately [creating a Linux-based App Service PHP app](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/php-webapp?view=azure-devops#create-an-azure-app-service) and uploading content using a deployment option like such as by using [FTP](https://docs.microsoft.com/en-us/azure/app-service/deploy-ftp?tabs=portal).
+
+
+* * *
+
 ### **Frameworks**
 
 Checks if the site is using frameworks not currently supported for automatic migration. Allows ASP.NET, and PHP. (In future builds ASP.NET Core, NodeJS, Java, and Python will be supported).
