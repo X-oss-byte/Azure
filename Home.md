@@ -1,10 +1,10 @@
 Welcome to the App-Service-Migration-Assistant wiki!
 
-### Looking for info about...
+## Looking for info about...
 
-* using Migration Assistant on Linux -> see [Linux Notes](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Linux-Notes)
-* the PowerShell scripts -> check out [PowerShell Scripts](https://github.com/Azure/App-Service-Migration-Assistant/wiki/PowerShell-Scripts)
-* migrating Java applications from Apache Tomcat servers -> see [TOMCAT Java Information](https://github.com/Azure/App-Service-Migration-Assistant/wiki/TOMCAT-Java-Information)
+* Using Migration Assistant on Linux -> see [Linux Notes](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Linux-Notes)
+* The PowerShell scripts -> check out [PowerShell Scripts](https://github.com/Azure/App-Service-Migration-Assistant/wiki/PowerShell-Scripts)
+* Migrating Java applications from Apache Tomcat servers -> see [TOMCAT Java Information](https://github.com/Azure/App-Service-Migration-Assistant/wiki/TOMCAT-Java-Information)
 
 # Getting Started
 * [Introducing App Service Migration Assistant for ASP.NET applications](https://azure.microsoft.com/en-us/blog/introducing-the-app-service-migration-assistant-for-asp-net-applications/?utm_source=t.co&utm_medium=referral)
@@ -36,3 +36,5 @@ Welcome to the App-Service-Migration-Assistant wiki!
     * Applications that use more than one application pool
     * Use of an application pool that uses a custom account
 
+## Getting Help
+Migration assistant tooling is provided as-is, and the way to get help or report issues is by using the [Issues](https://github.com/Azure/App-Service-Migration-Assistant/issues) page.
