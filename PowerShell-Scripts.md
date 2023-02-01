@@ -2,8 +2,8 @@
 PowerShell scripts for assessing and migrating all .NET sites on a single IIS server in bulk are now available on our downloads page, under "App Service migration assistant for PowerShell Scripts": https://azure.microsoft.com/en-us/services/app-service/migration-assistant/
 
 ## Minimum requirements
-* Requires Administrator permissions on the server
-* Machine executing scripts must be using PowerShell v5.1 or higher
+* Requires Administrator permissions on the IIS server
+* Machine executing scripts must be using PowerShell v4 or higher for getting readiness results (PSv2.0 for a remote IIS server) and packaging; or PowerShell v5.1 or higher for migrating packages to Azure 
 * Works for IIS servers 7.5 or higher with IIS Management Console component enabled
 * Remote readiness assessment possible for servers with PowerShell remoting enabled
 * Readiness assessment and packaging may be done without outgoing network connectivity, settings generation and migration requires outbound connectivity and Azure PowerShell on the machine
