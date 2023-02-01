@@ -9,7 +9,7 @@ PowerShell scripts for assessing and migrating all .NET sites on a single IIS se
 * Readiness assessment and packaging may be done without outgoing network connectivity, settings generation and migration requires outbound connectivity and Azure PowerShell on the machine
 
 ## Setting up scripts 
-1. Verify the scripts package .zip you downloaded matches the SHA256 signature noted for the release (see [Release Notes](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Release-Notes)). For example, this is the SHA256 for the PowerShell script Preview package 1.0.0: 53E419F0C177B19130402264365FE1CC195FC9D9E5E39FB97CE67F2FBB21EA8B. You can check the signature using a PowerShell command like:
+1. Verify the scripts package .zip you downloaded matches the SHA256 signature noted for the release (see [Release Notes](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Release-Notes)). For example, this is the SHA256 for the PowerShell script GA release 1.0.0: 2FFC3882B4D1C202D3397E963EDBE6B19C3B830E2C4CB629934020ABA9759952. You can check the signature using a PowerShell command like:
 
 `Get-FileHash -Path .\AppServiceMigrationScripts.zip -Algorithm SHA256`
 
