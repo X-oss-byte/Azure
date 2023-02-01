@@ -1,3 +1,9 @@
+### 1.0.1 (PS Scripts) 
+* SHA256 for AppServiceMigrationScripts.zip: 2FFC3882B4D1C202D3397E963EDBE6B19C3B830E2C4CB629934020ABA9759952
+* PowerShell scripts for bulk assessment and migration of sites on an IIS server
+* Allows override to migrate sites with identified issues
+* Enables "offline" server scenario for assessing and packaging sites on a server that has limited outbound connectivity and then doing migration step from separate machine
+
 ### 1.0.0 (PS Scripts Preview) 
 * SHA256 for AppServiceMigrationScripts.zip: 53E419F0C177B19130402264365FE1CC195FC9D9E5E39FB97CE67F2FBB21EA8B
 * Preview of PowerShell script option for bulk assessment and migration of sites on an IIS server
